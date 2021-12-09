@@ -8,7 +8,7 @@ export function Scene(props) {
     return (
       <>      
        {/*} <primitive object={gltf.scene}  position={props.pos} rotation={props.rot}/>  */}  
-       <primitive object={gltf.scene} />
+       <primitive object={gltf.scene} position={props.pos} rotation={props.rot} scale={[0.5,0.5,0.5]}/>
       </>
     )
   }
