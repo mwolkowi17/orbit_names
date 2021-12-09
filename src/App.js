@@ -27,7 +27,7 @@ function App() {
           <pointLight position={[10, 20, 10]} />
           <pointLight position={[-5, -15, 30]} />
           <Suspense fallback={<Loader />}>
-            <Scene pos={[4,3,0]} rot={[Math.PI*0.1,0,0]}/>
+            <Scene pos={[4,3,0]} rot={[Math.PI*0.2,0,0]}/>
           </Suspense>
 
 
