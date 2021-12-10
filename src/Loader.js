@@ -14,7 +14,7 @@ export function Scene(props) {
   const gltf = useLoader(GLTFLoader, '/orbit_for_fiber2_2.glb')
 
 
-
+  //dołożyć animację spring
   return (
     <group position={props.pos} rotation={props.rot} scale={[0.5, 0.5, 0.5]}>
       {/*} <primitive object={gltf.scene}  position={props.pos} rotation={props.rot}/>  */}
