@@ -3,14 +3,6 @@ import './App.css';
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Scene } from './Loader';
-import {  SceneText1 } from './Loadertext1';
-import {  SceneText2 } from './Loadertext2';
-import {  SceneText3 } from './Loadertext3';
-import {  SceneText4 } from './Loadertext4';
-import {  SceneText5 } from './Loadertext5';
-import {  SceneText6 } from './Loadertext6';
-import {  SceneText7 } from './Loadertext7';
-import {  SceneText8 } from './Loadertext8';
 import { Html, OrbitControls } from '@react-three/drei';
 
 
@@ -39,14 +31,6 @@ function App() {
             <pointLight position={[-5, -15, 30]} />
             <Suspense fallback={<Loader />}>
               <Scene pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]} />
-              <SceneText1 pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]}  />
-              <SceneText2 pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]} />
-              <SceneText3 pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]} />
-              <SceneText4 pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]} />
-              <SceneText5 pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]} />
-              <SceneText6 pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]} />
-              <SceneText7 pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]} />
-              <SceneText8 pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]} />
             </Suspense>
 
           {/*</PresentationControls>*/}

@@ -14,9 +14,7 @@ export function SceneText1(props) {
   return (
     <>
       <primitive object={gltf.scene}
-        position={props.pos}
-        rotation={props.rot}
-        scale={[0.5, 0.5, 0.5]}
+        
         onPointerOver={(e) => setHover(true)}
         onPointerOut={(e) => setHover(false)} />
     </>
