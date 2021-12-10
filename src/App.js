@@ -25,6 +25,8 @@ function App() {
     return <Html center style={{ color: 'white' }}>loading...</Html>
   }
 
+  
+
 
   return (
     <div>
@@ -37,7 +39,7 @@ function App() {
             <pointLight position={[-5, -15, 30]} />
             <Suspense fallback={<Loader />}>
               <Scene pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]} />
-              <SceneText1 pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]} />
+              <SceneText1 pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]}  />
               <SceneText2 pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]} />
               <SceneText3 pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]} />
               <SceneText4 pos={[4, 3, 0]} rot={[Math.PI * 0.2, 0, 0]} />
