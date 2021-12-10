@@ -9,12 +9,14 @@ export function SceneText1(props) {
 
   const [hovered, setHover] = useState(false)
 
+  hovered?console.log('hovered'):console.log('idle');
+// it should be full object operation pos/rot
   return (
     <>
       <primitive object={gltf.scene}
         position={props.pos}
         rotation={props.rot}
-        scale={[0.5, hovered ? 0.7 : 0.5, 0.5]}
+        scale={[0.5, 0.5, 0.5]}
         onPointerOver={(e) => setHover(true)}
         onPointerOut={(e) => setHover(false)} />
     </>
