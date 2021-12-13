@@ -19,10 +19,10 @@ export function Scene(props) {
     <group position={props.pos} rotation={props.rot} scale={[0.5, 0.5, 0.5]}>
       {/*} <primitive object={gltf.scene}  position={props.pos} rotation={props.rot}/>  */}
       <primitive object={gltf.scene} />
-      <SceneText1 />
-      <SceneText2 />
-      <SceneText3 />
-      <SceneText4 />
+      <SceneText1 over1={props.over11} />
+      <SceneText2 over={props.over11}/>
+      <SceneText3 over3={props.over31}/>
+      <SceneText4 over={props.over31}/>
       <SceneText5 />
       <SceneText6 />
       <SceneText7 />

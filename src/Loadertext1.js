@@ -14,8 +14,8 @@ export function SceneText1(props) {
   return (
     <>
       <primitive object={gltf.scene}
-        
-        onPointerOver={(e) => setHover(true)}
+
+        onPointerOver={props.over1}
         onPointerOut={(e) => setHover(false)} />
     </>
   )
