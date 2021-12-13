@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Scene } from './Loader';
 import { Html, OrbitControls } from '@react-three/drei';
-import { useSpring, animated } from '@react-spring/three'
+import { useSpring, animated, config } from '@react-spring/three'
 
 function App() {
 
@@ -17,15 +17,15 @@ function App() {
   const myMesh = React.useRef();
   const [active, setActive] = useState(false);
   const [scaleValue, setScaleValue] = useState (1.5)
-  const { scale } = useSpring({ scale: active ? scaleValue : 1})
+  const { scale } = useSpring({ scale: active ? scaleValue : 1, config: config.wobbly,})
   
-  function positionSet0(){
+  /*function positionSet0(){
     if(scaleValue===2){
       setScaleValue(1.5);
     }
     setScaleValue(1.5);
     setActive(!active);
-  }
+  }*/
 
   function positionSet1(){
    setScaleValue(1.5);
@@ -56,7 +56,7 @@ function App() {
             <pointLight position={[10, 20, 10]} />
             <pointLight position={[-5, -15, 30]} />
             <Suspense fallback={<Loader />}>
-            <animated.mesh scale={scale} onClick={positionSet0} ref={myMesh}>
+            <animated.mesh scale={scale} /*onClick={positionSet0}*/ ref={myMesh}>
               <Scene pos={[4, 3, 0]} 
                      rot={[Math.PI * 0.2, 0, 0]}
                      over11={positionSet1}
