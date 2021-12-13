@@ -25,7 +25,10 @@ function App() {
       <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 0, 8] }}>
         <Suspense fallback={null}>
           {/*<PresentationControls snap={true}  polar={[0, Math.PI / 2]} >**/}
-          <OrbitControls/>
+          <OrbitControls maxPolarAngle={Math.PI / 1.6}
+                         minPolarAngle={Math.PI/2.4}
+                         maxAzimuthAngle={Math.PI*2.3}
+                         minAzimuthAngle={-Math.PI *2.3}/>
             <ambientLight />
             <pointLight position={[10, 20, 10]} />
             <pointLight position={[-5, -15, 30]} />
