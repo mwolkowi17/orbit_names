@@ -4,7 +4,8 @@ import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Scene } from './Loader';
 import { Html, OrbitControls } from '@react-three/drei';
-import { useSpring, animated, config } from '@react-spring/three'
+import { useSpring, animated, config } from '@react-spring/three';
+import {Display} from './Display';
 
 function App() {
 
@@ -15,6 +16,9 @@ function App() {
   }
 
   const myMesh = React.useRef();
+ 
+  const [ifVisible, setIfVisible] = useState('visible');
+
   const [active, setActive] = useState(false);
   const [scaleValue, setScaleValue] = useState (1.5)
   const { scale } = useSpring({ scale: active ? scaleValue : 1, config: config.wobbly,})
@@ -45,6 +49,7 @@ function App() {
 
   return (
     <div>
+      
       <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 0, 8] }}>
         <Suspense fallback={null}>
           {/*<PresentationControls snap={true}  polar={[0, Math.PI / 2]} >**/}
@@ -57,7 +62,7 @@ function App() {
             <pointLight position={[-5, -15, 30]} />
             <Suspense fallback={<Loader />}>
             <animated.mesh scale={scale} /*onClick={positionSet0}*/ ref={myMesh}>
-              <Scene pos={[4, 3, 0]} 
+              <Scene pos={[4, 3.4, 0.7]} 
                      rot={[Math.PI * 0.2, 0, 0]}
                      over11={positionSet1}
                      over31={positionSet2} />
@@ -67,6 +72,7 @@ function App() {
           {/*</PresentationControls>*/}
         </Suspense>
       </Canvas>
+      <Display />
     </div>
 
   );
