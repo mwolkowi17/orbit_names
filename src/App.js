@@ -72,7 +72,7 @@ function App() {
           {/*</PresentationControls>*/}
         </Suspense>
       </Canvas>
-      <Display />
+      <Display displayed={ifVisible} />
     </div>
 
   );
