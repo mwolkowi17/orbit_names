@@ -8,7 +8,7 @@ export function SceneText3(props) {
     return (
       <>      
        <primitive object={gltf.scene}
-                  onPointerOver={props.over3} />
+                  onClick={props.over3} />
       </>
     )
   }

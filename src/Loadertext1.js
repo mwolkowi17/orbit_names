@@ -9,7 +9,7 @@ export function SceneText1(props) {
 
   const [hovered, setHover] = useState(false)
 
-  hovered ? console.log('hovered') : console.log('idle');
+  //hovered ? console.log('hovered') : console.log('idle');
   // it should be full object operation pos/rot
   return (
     <>
