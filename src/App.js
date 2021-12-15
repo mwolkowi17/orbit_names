@@ -21,8 +21,9 @@ function App() {
   const [ifVisible, setIfVisible] = useState('hidden');
 
   const [active, setActive] = useState(false);
-  const [scaleValue, setScaleValue] = useState(1.5)
-  const { scale, position } = useSpring({ scale: active ? scaleValue : 1, position: active ? [0, 0, 1.2] : [0, 0, 0], config: config.wobbly })
+  const [scaleValue, setScaleValue] = useState(1.5);
+  const [positionValue, setPositionValue] = useState ([0, 0, 1.2])
+  const { scale, position } = useSpring({ scale: active ? scaleValue : 1, position: active ? positionValue : [0, 0, 0], config: config.wobbly })
 
   /*function positionSet0(){
     if(scaleValue===2){
@@ -48,10 +49,11 @@ function App() {
 
   }*/
 
-  function testText() { //dodać parametr do pozycji
+  function testText(xpos) { //dodać parametr do pozycji
     console.log('tested');
 
-    setScaleValue(1.5);
+    setScaleValue(1.2);
+    setPositionValue(xpos)
     if (active === false) {
       setActive(!active)
     };
@@ -87,8 +89,8 @@ function App() {
             <animated.mesh scale={scale} position={position} /*onClick={positionSet0}*/ ref={myMesh}>
               <Scene pos={[4, 3.4, 0.7]}
                 rot={[Math.PI * 0.2, 0, 0]}
-                over11={testText}
-                over31={testText} />
+                over11={()=>testText([0.5, 1.5, 0.2])}
+                over31={()=>testText([0, 0, 1.2])} />
             </animated.mesh>
           </Suspense>
 
