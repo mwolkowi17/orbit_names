@@ -32,7 +32,7 @@ function App() {
     setActive(!active);
   }*/
 
-  function positionSet1() {
+  function positionSet1() {   
     setScaleValue(1.5);
     if (active === false) {
       setActive(!active)
@@ -48,7 +48,7 @@ function App() {
 
   }*/
 
-  function testText() {
+  function testText() { //dodać parametr do pozycji
     console.log('tested');
 
     setScaleValue(1.5);
