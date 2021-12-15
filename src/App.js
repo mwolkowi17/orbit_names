@@ -91,7 +91,8 @@ function App() {
                 rot={[Math.PI * 0.2, 0, 0]}
                 over11={()=>testText([0.5, 1.5, 0.2])}
                 over21={()=>testText([-1.4, 0.9, 0.2])}
-                over31={()=>testText([0, 0, 1.2])} />
+                over31={()=>testText([0, 0, 1.2])}
+                over41={()=>testText([-2, -0.5, 1.8])} />
             </animated.mesh>
           </Suspense>
 
