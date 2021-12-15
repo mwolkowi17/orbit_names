@@ -1,6 +1,5 @@
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { Html } from '@react-three/drei'
 import { useRef, useEffect, useState } from 'react'
 
 

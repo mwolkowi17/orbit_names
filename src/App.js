@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Scene } from './Loader';
@@ -15,7 +15,8 @@ function App() {
     return <Html center style={{ color: 'white' }}>loading...</Html>
   }
 
-  const myMesh = React.useRef();
+  const myMesh = useRef();
+  const myControl = useRef();
 
   const [ifVisible, setIfVisible] = useState('hidden');
 
@@ -39,16 +40,17 @@ function App() {
     ;
   }
 
-  function positionSet2() {
+  /*function positionSet2() {
     setScaleValue(2);
     if (active === false) {
       setActive(!active)
     };
 
-  }
+  }*/
 
   function testText() {
     console.log('tested');
+
     setScaleValue(1.5);
     if (active === false) {
       setActive(!active)
@@ -59,7 +61,13 @@ function App() {
   function closeDisplay(){
     setIfVisible('hidden');
     setActive(!active);
-  }
+  };
+
+  useEffect(() => {
+    if (myControl.current) {
+      myControl.current.reset();
+    }
+  }, [active]);
 
   return (
     <div>
@@ -70,7 +78,8 @@ function App() {
           <OrbitControls maxPolarAngle={Math.PI / 1.6}
             minPolarAngle={Math.PI / 2.4}
             maxAzimuthAngle={Math.PI * 2.3}
-            minAzimuthAngle={-Math.PI * 2.3} />
+            minAzimuthAngle={-Math.PI * 2.3}
+            ref={myControl} />
           <ambientLight />
           <pointLight position={[10, 20, 10]} />
           <pointLight position={[-5, -15, 30]} />
