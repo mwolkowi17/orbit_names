@@ -87,7 +87,7 @@ function App() {
             <animated.mesh scale={scale} position={position} /*onClick={positionSet0}*/ ref={myMesh}>
               <Scene pos={[4, 3.4, 0.7]}
                 rot={[Math.PI * 0.2, 0, 0]}
-                over11={positionSet1}
+                over11={testText}
                 over31={testText} />
             </animated.mesh>
           </Suspense>
