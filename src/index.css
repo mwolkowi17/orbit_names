@@ -40,3 +40,10 @@ canvas{
   cursor: pointer;
   font-size: 22px;
 }
+
+.text3{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  
+}
