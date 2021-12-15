@@ -1,13 +1,30 @@
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { useRef, useEffect, useState } from 'react'
 
 
 export function SceneText2(props) {
-    const gltf = useLoader(GLTFLoader, '/orbit_for_fiber2_text2.glb')
-    return (
-      <>      
-       <primitive object={gltf.scene}
-                  onPointerOver={props.over} />
-      </>
-    )
-  }
+  const gltf = useLoader(GLTFLoader, '/orbit_for_fiber2_text2.glb')
+
+  const textRef = useRef();
+
+  const [hovered, setHovered] = useState(false)
+
+  useEffect(() => {
+    document.body.style.cursor = hovered ? 'pointer' : 'auto'
+  }, [hovered])
+
+  return (
+    <>
+      <group>
+        <mesh ref={textRef}>
+          <primitive object={gltf.scene}
+            onClick={props.over2}
+            onPointerOver={() => setHovered(true)}
+            onPointerOut={() => setHovered(false)} />
+        </mesh>
+        {/* <Html className='text3' transform occlude={[textRef]} position={[-8,-2.5,6.5]} />*/}
+      </group>
+    </>
+  )
+}

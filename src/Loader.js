@@ -26,7 +26,7 @@ export function Scene(props) {
       {/*} <primitive object={gltf.scene}  position={props.pos} rotation={props.rot}/>  */}
       <primitive object={gltf.scene} />
       <SceneText1 over1={props.over11} />
-      <SceneText2 /*over={props.over11}*/ />
+      <SceneText2 over2={props.over21} />
       <SceneText3 over3={props.over31} />
       <SceneText4 /*over={props.over31}*/ />
       <SceneText5 />
