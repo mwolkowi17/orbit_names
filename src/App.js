@@ -96,7 +96,9 @@ function App() {
                 over51={()=>testText([-2, 1.5, 2.8])} 
                 over61={()=>testText([-0.5, -2, 2.8])}
                 over71={()=>testText([-2.5, -2, 3.2])}
-                over81={()=>testText([-3, -0.5, 3.2])}/>
+                over81={()=>testText([-3, -0.5, 3.2])}
+                over91={()=>testText([1.5, -2, 4.5])}
+                over101={()=>testText([0.5, -2, 4])}/>
             </animated.mesh>
           </Suspense>
 

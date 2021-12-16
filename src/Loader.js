@@ -33,8 +33,8 @@ export function Scene(props) {
       <SceneText6 over6={props.over61}/>
       <SceneText7 over7={props.over71}/>
       <SceneText8 over8={props.over81}/>
-      <SceneText9 />
-      <SceneText10 />
+      <SceneText9 over9={props.over91} />
+      <SceneText10 over10={props.over101}/>
       <SceneText11 />
       <SceneText12 />
       <SceneText13 />
