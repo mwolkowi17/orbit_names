@@ -17,8 +17,8 @@ import { SceneText14 } from './Loadertext14';
 
 export function Scene(props) {
   //const gltf = useLoader(GLTFLoader, '/zawor_kulowy_three_kula1.glb')
-  const gltf = useLoader(GLTFLoader, '/orbit_for_fiber2_2.glb')
-
+  //const gltf = useLoader(GLTFLoader, '/orbit_for_fiber2_2.glb')
+  const gltf = useLoader(GLTFLoader, '/test/orbit_names/orbit_for_fiber2_2.glb')
 
   //dołożyć animację spring
   return (

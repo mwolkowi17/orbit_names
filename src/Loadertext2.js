@@ -4,7 +4,7 @@ import { useRef, useEffect, useState } from 'react'
 
 
 export function SceneText2(props) {
-  const gltf = useLoader(GLTFLoader, '/orbit_for_fiber2_text2.glb')
+  const gltf = useLoader(GLTFLoader, '/test/orbit_names/orbit_for_fiber2_text2.glb')
 
   const textRef = useRef();
 
