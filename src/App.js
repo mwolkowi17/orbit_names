@@ -12,7 +12,7 @@ function App() {
   function Loader() {
     //const { progress } = useProgress()
     //return <Html center style={{ color: 'white' }}>{progress} % loaded</Html>
-    return <Html center style={{ color: 'white' }}>loading...</Html>
+    return <Html center style={{ color: 'black' }}>loading...</Html>
   }
 
   const myMesh = useRef();
